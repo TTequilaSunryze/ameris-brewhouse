@@ -1,0 +1,33 @@
+---
+import MenuItem from "./MenuItem.astro";
+const ITEMS = [
+    {
+        name: "Milanesa",
+        description:"Filete de carne vacuna empanado y horneado. Acompañado con patatas",
+        euro: "€",
+        price: 12.50,
+
+      
+    
+    },
+    {
+        name: "Milanesa Napolitana",
+        description: "Filete de carne vacuna emapanado y horneado con salsa de tomate, jamon cocido y mozzarella. Acompañado con patatas",
+        euro: "€",
+        price: 15.00,
+    
+    },
+
+      
+]
+---
+{
+    
+        ITEMS.map((item) =>(
+            <div  class="border bg-emerald-950/70 p-4 gap-x-5 rounded-xl hover:shadow-xl hover:opacity-75  hover:shadow-black cursor-pointer ">
+                <MenuItem {...item} />
+            </div>
+        ))
+    
+}
+

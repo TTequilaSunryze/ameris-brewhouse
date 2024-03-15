@@ -1,0 +1,80 @@
+---
+import MenuItem from "./MenuItem.astro";
+const ITEMS = [
+    {
+        name: "Vino Blanco de la casa",
+        description:"",
+        euro: "€",
+        price: 2.90,
+        copa: 15.00,
+    },
+    {
+        name: "vino Tinto de la casa",
+        description: "",
+        euro: "€",
+        price: 2.90,
+        copa: 15.00,
+    
+    },
+    {
+        name: "Marqués de Ullia",
+        description: " Vino tinto de Rioja. Crianza",
+        euro: "€",
+        price: 15.00,
+    
+    },
+    {
+        name: "López Cristóbal",
+        description: " Vino tinto de Ribera del Duero. Crianza",
+        euro: "€",
+        price: 22.00,
+  
+    },
+    {
+        name: "Marqués de Burgos",
+        description: " Vino tinto de Ribera del Duero. Roble",
+        euro: "€",
+        price: 17.50,
+     
+    },
+    {
+        name: "Malbec Argentino",
+        description: " Vino tinto de Argentina",
+        euro: "€",
+        price: 22.00,
+    },
+    {
+        name: "Pampano",
+        description: "Vino blanco verdejo",
+        euro:   "€",
+        price: 18.00,
+
+    },
+      
+    {
+        name: "La sonrisa de Tares",
+        description: "Vino blanco. De bierzo, Castilla y león",
+        euro:   "€",
+        price: 17.50,
+
+    },
+    {
+        name: "Albariño Serra da Estrela",
+        description: "Viño blanco. De Rías Baixas, Galicia",
+        euro:   "€",
+        price: 20.00,
+
+    },
+    
+]
+---
+{
+    
+        ITEMS.map((item) =>(
+            <div  class="border bg-emerald-950/70 p-4 gap-x-5 rounded-xl hover:shadow-xl hover:opacity-75  hover:shadow-black cursor-pointer ">
+                <MenuItem {...item} />
+            </div>
+        ))
+    
+}
+

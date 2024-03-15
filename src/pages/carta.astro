@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MenuEntrante from "../components/MenuEntrante.astro";
+import MenuPizza from "../components/MenuPizza.astro";
+import MenuChoripan from "../components/MenuChoripan.astro";
+import MenuEmpanadas from "../components/MenuEmpanadas.astro";
+import MenuMilanesas from "../components/MenuMilanesas.astro";
+import MenuBebidas from "../components/MenuBebidas.astro";
+import MenuVinos from "../components/MenuVinos.astro";
+---
+<Layout title="Carta ameris brewhouse">       
+<main>
+<slot />
+        <section class=" px-64" id="#compartir">
+                <h2 class="md:text-4xl font-semibold w-full text-center">Para Compartir</h2>
+                <div class="grid grid-cols-1  md:grid-cols-2 gap-y-5 gap-x-10 p-20 ">
+                        <MenuEntrante />
+                </div>
+        </section> 
+
+        <section id="pizzas" class=" px-64">
+                <h2 class="text-4xl font-semibold w-full text-center">Pizzas</h2>
+                <div class="grid grid-cols-1  md:grid-cols-2 gap-y-5 gap-x-10 p-20 ">
+                        <MenuPizza />
+                </div>
+        </section>
+
+        <section id="choripanes" class=" px-64">
+                <h2 class="text-4xl font-semibold w-full text-center">Choripanes Argentinos</h2>
+                <div class="grid grid-cols-1  md:grid-cols-2 gap-y-5 gap-x-10 p-20 ">
+                        <MenuChoripan />
+                </div>
+        </section>
+        <section id="empanadas" class=" px-64">
+                <h2 class="text-4xl font-semibold w-full text-center">Empanadas Argentinas</h2>
+                <div class="grid grid-cols-1  md:grid-cols-2 gap-y-5 gap-x-10 p-20 ">
+                        <MenuEmpanadas />
+                </div>
+        </section>
+        <section id="milanesas" class=" px-64">
+                <h2 class="text-4xl font-semibold w-full text-center">Milanesas Argentinas</h2>
+                <div class="grid grid-cols-1  md:grid-cols-2 gap-y-5 gap-x-10 p-20 ">
+                        <MenuMilanesas />
+                </div>
+        </section>
+        <section id="bebidas" class=" px-64">
+                <h2 class="text-4xl font-semibold w-full text-center">Bebidas</h2>
+                <div class="grid grid-cols-1  md:grid-cols-2 gap-y-5 gap-x-10 p-20 ">
+                        <MenuBebidas />
+                </div>
+        </section>
+        <section id="vinos" class=" px-64">
+                <h2 class="text-4xl font-semibold w-full text-center">Vinos</h2>
+                <div class="grid grid-cols-1  md:grid-cols-2 gap-y-5 gap-x-10 p-20 ">
+                        <MenuVinos />
+                </div>
+        </section>
+</main>
+</Layout>

@@ -1,0 +1,109 @@
+---
+import MenuItem from "./MenuItem.astro";
+const ITEMS = [
+    {
+        name: "Agua",
+        description:"",
+        euro: "€",
+        price: 1.50,
+
+      
+    
+    },
+    {
+        name: "Agua con gas",
+        description: "",
+        euro: "€",
+        price: 1.60,
+    
+    },
+    {
+        name: "Agua Tónica",
+        description: "",
+        euro: "€",
+        price: 2.00,
+    
+    },
+    {
+        name: "Coca Cola/zero",
+        description: "",
+        euro: "€",
+        price: 1.90,
+  
+    },
+    {
+        name: "Fanta Naranja/Limón",
+        description: "",
+        euro: "€",
+        price: 1.90,
+     
+    },
+    {
+        name: "Nestea",
+        description: "",
+        euro: "€",
+        price: 1.80,
+    },
+    {
+        name: "Aquarius Naranja/Limón",
+        description: "",
+        euro:   "€",
+        price: 2.00,
+
+    },
+      
+    {
+        name: "Zumos(Naranja, Melocotón, Piña, Tomate)",
+        description: "",
+        euro:   "€",
+        price: 2.00,
+
+    },
+    {
+        name: "Desperados",
+        description: "",
+        euro:   "€",
+        price: 3.00,
+
+    },
+    {
+        name: "Monster",
+        description: "",
+        euro:   "€",
+        price: 3.00,
+
+    },
+    {
+        name: "Ladrón de Manzanas",
+        description: "",
+        euro:   "€",
+        price: 2.00,
+
+    },
+    {
+        name: "Chupito",
+        description: "",
+        euro:   "€",
+        price: 1.50,
+
+    },
+    {
+        name: "Cubatas",
+        description: "Gin-Tonic, Vodka-Limon, Ron-Cola, Whisky-Cola, Fernet-Cola o el combinado que prefieras! ",
+        euro:   "€",
+        price: 8.00,
+
+    },
+    
+]
+---
+{
+    
+        ITEMS.map((item) =>(
+            <div  class="border bg-emerald-950/70 p-4 gap-x-5 rounded-xl hover:shadow-xl hover:opacity-75  hover:shadow-black cursor-pointer ">
+                <MenuItem {...item} />
+            </div>
+        ))
+    
+}
+

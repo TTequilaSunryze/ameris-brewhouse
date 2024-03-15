@@ -1,0 +1,143 @@
+---
+import MenuItem from "./MenuItem.astro";
+const ITEMS = [
+    {
+        name: "Carne Suave",
+        description:"",
+        euro: "€",
+        price: 3.00,
+
+      
+    
+    },
+    {
+        name: "picante",
+        description: "",
+        euro: "€",
+        price: 3,
+    
+    },
+    {
+        name: "Carne cortada a cuchillo",
+        description: "",
+        euro: "€",
+        price: 3,
+    
+    },
+    {
+        name: "Asado y provolone",
+        description: "",
+        euro: "€",
+        price: 3,
+  
+    },
+    {
+        name: "Costillas a la barbacoa",
+        description: "",
+        euro: "€",
+        price: 3,
+     
+    },
+    {
+        name: "Cheeseburguer",
+        description: "",
+        euro: "€",
+        price: 3,
+    },
+    {
+        name: "Chorizo",
+        description: "",
+        euro:   "€",
+        price: 3,
+
+    },
+      
+    {
+        name: "Chorizo y chimichurri",
+        description: "",
+        euro:   "€",
+        price: 3,
+
+    },
+    {
+        name: "Pollo",
+        description: "",
+        euro:   "€",
+        price: 2.8,
+
+    },
+    {
+        name: "Pollo picante",
+        description: "",
+        euro:   "€",
+        price: 3,
+
+    },
+    {
+        name: "Jamon y Queso",
+        description: "",
+        euro:   "€",
+        price: 2.80,
+
+    },
+    {
+        name: "Caprese",
+        description: "",
+        euro:   "€",
+        price: 2.8,
+
+    },
+    {
+        name: "Cebolla y Queso",
+        description: "",
+        euro:   "€",
+        price: 2.8,
+
+    },
+    {
+        name: "4 Quesos",
+        description: "Mozzarella, Gouda, Cheddar, Queso Azul",
+        euro:   "€",
+        price: 2.8,
+
+    },
+    {
+        name: "Espinacas y Queso",
+        description: "",
+        euro:   "€",
+        price: 2.8,
+
+    },
+    {
+        name: "Humita",
+        description: "",
+        euro:   "€",
+        price: 3,
+
+    },
+    {
+        name: "Calabaza y Queso",
+        description: "",
+        euro:   "€",
+        price: 3,
+
+    },
+    {
+        name: "Cueso de Cabra y Nuez",
+        description: "",
+        euro:   "€",
+        price: 3,
+
+    },
+]
+---
+{
+    
+        ITEMS.map((item) =>(
+            <div  class="border bg-emerald-950/70 p-4 gap-x-5 rounded-xl hover:shadow-xl hover:opacity-75  hover:shadow-black cursor-pointer ">
+                <MenuItem {...item} />
+            </div>
+        ))
+    
+}
+

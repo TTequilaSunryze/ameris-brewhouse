@@ -1,0 +1,33 @@
+---
+import MenuItem from "./MenuItem.astro";
+const ITEMS = [
+    {
+        name: "Choripan Argentino",
+        description:"Chorizo criollo, chimichurri, Pan",
+        euro: "€",
+        price: 8.50,
+
+      
+    
+    },
+    {
+        name: "Choripan Criollo",
+        description: "Pan, Chorizo criollo y la tradicional salsa criolla",
+        euro: "€",
+        price: 8.5,
+    
+    },
+
+      
+]
+---
+{
+    
+        ITEMS.map((item) =>(
+            <div  class="border bg-emerald-950/70 p-4 gap-x-5 rounded-xl hover:shadow-xl hover:opacity-75  hover:shadow-black cursor-pointer ">
+                <MenuItem {...item} />
+            </div>
+        ))
+    
+}
+

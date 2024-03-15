@@ -2,6 +2,10 @@
 interface Props {
 	title: string;
 }
+import '@fontsource-variable/crimson-pro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
 
 const { title } = Astro.props;
 ---
@@ -17,35 +21,36 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		color-scheme: light dark;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		font-family: 'libre baskerville', system-ui, sans-serif;
+		scroll-behavior: smooth;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	body{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100vh;
+		background: #05360d;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #043f16, #00000038);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #034621, #00000036); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		font-family: 'Crimson Pro Variable', serif;
+
 	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: smooth;
+		}
+}
+
 </style>

@@ -1,0 +1,37 @@
+---
+export interface Props{
+    name: string;
+    description?: string;
+    euro: string;
+    price: number;
+    copa?: number;
+    image?: string;
+}
+
+const {name, description, euro, price, image, copa} = Astro.props
+---
+
+<div class="flex flex-row gap-x-5 justify-between ">
+    <div> 
+        <h3 class=" font-bold text-xl text-yellow-400/90">{name}</h3>
+        <p class="font-light text-lg text-pretty text-gray-100/90">{description}</p>
+        <span class=" text-white">{euro}</span>
+        <span class="text-white">{price}</span>
+
+    {
+        copa && (
+            <p>
+                {euro} {copa}
+            </p>) 
+    }
+        </div>
+    {
+        image && (
+        <img 
+            src={image} 
+            alt="{name}" 
+            class="size-[96px] overflow-hidden"
+     
+        />)
+    }
+</div>

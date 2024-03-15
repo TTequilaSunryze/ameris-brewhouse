@@ -1,0 +1,66 @@
+---
+import MenuItem from "./MenuItem.astro";
+const ITEMS = [
+    {
+        name: "Margherita",
+        description:"Tomate, mozzarella, albahaca",
+        euro: "€",
+        price: 9.00,
+
+      
+    
+    },
+    {
+        name: "Diavola",
+        description: "Tomate, mozzarella, salami picante,",
+        euro: "€",
+        price: 11.00,
+    
+    },
+    {
+        name: "Ameri's",
+        description: "Salsa de tomate, mozzarella, rúcula, tomate cherry, jamón ibérico y lascas de parmesano",
+        euro: "€",
+        price: 12.00,
+    
+    },
+    {
+        name: "4 Formaggi",
+        description: "Salsa de tomate, mozzarella, rúcula, tomate cherry, jamón ibérico y lascas de parmesano",
+        euro: "€",
+        price: 12.00,
+  
+    },
+    {
+        name: "Carbonara",
+        description: "Nata, cebolla, champiñones, bacon y queso Parmesano",
+        euro: "€",
+        price: 12.00,
+     
+    },
+    {
+        name: "Julio Cesar",
+        description: "Salsa de tomate, Mozzarella, Atún, cebolla morada y olivas negras ",
+        euro: "€",
+        price: 12.00,
+    },
+    {
+        name: "Romana",
+        description: "Salsa de tomate, orégano, alcaparras, anchoas y olivas negras.",
+        euro:   "€",
+        price: 11.00,
+
+    },
+      
+]
+---
+{
+    
+        ITEMS.map((item) =>(
+            <div  class="border bg-emerald-950/70 p-4 gap-x-5 rounded-xl hover:shadow-xl hover:opacity-75  hover:shadow-black cursor-pointer ">
+                <MenuItem {...item} />
+            </div>
+        ))
+    
+}
+
